@@ -14,7 +14,7 @@ Unlike another erb-based IPFS template I made recently, [electron-react-boilerpl
 Clone the repo and install dependencies:
 
 ```bash
-git clone --depth 1 --branch main https://github.com/electron-react-boilerplate/electron-react-boilerplate.git your-project-name
+git clone --depth 1 --branch main https://github.com/wds4/electron-react-boilerplate-ipfs-core.git your-project-name
 cd your-project-name
 npm install
 ```
