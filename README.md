@@ -4,6 +4,8 @@ I didn't make any changes to the main process. The IPFS node is accessed entirel
 
 Unlike another erb-based IPFS template I made recently, [electron-react-boilerplate-ipfs](https://github.com/wds4/electron-react-boilerplate-ipfs), there is no need for the user to install the IPFS node independently.
 
+Note: ipfs-core must be installed as a devDependency, NOT a dependency, in the top-level [package.json](https://github.com/wds4/electron-react-boilerplate-ipfs-core/blob/main/package.json). See [this discussion](https://discuss.ipfs.tech/t/why-does-npm-call-ipfs-core-a-native-dependency/15725) for a discussion why. 
+
 ## Install
 
 Clone the repo and install dependencies:
@@ -12,14 +14,6 @@ Clone the repo and install dependencies:
 git clone --depth 1 --branch main https://github.com/wds4/electron-react-boilerplate-ipfs-core.git your-project-name
 cd your-project-name
 npm install
-```
-
-For some reason, the only way for me to get it to work (so far) is to leave ipfs-core out of package.json, so it is not included in the initial install. If I include ipfs-core in package.json, then the initial install tells me ipfs-core is a native dependency (which doesn't make sense since it is in javascript), and then it fails to start on the next step.
-
-After the initial installation step (with ipfs-core not listed in package.json as a dependency), you then install ipfs-core:
-
-```bash
-npm install ipfs-core
 ```
 
 You are now ready to run the app:
